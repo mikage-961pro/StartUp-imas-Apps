@@ -21,28 +21,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //        // Insert code here to initialize your application
 //    }
     
-        func applicationDidFinishLaunching(aNotification: NSNotification) {
-                // Insert code here to initialize your application
-
-            NSUserNotificationCenter.default.delegate = self as? NSUserNotificationCenterDelegate
-                let notification = NSUserNotification()
-                notification.title = "アイドルマスター シャイニーカラーズ"
-                notification.subtitle = "メンテナンスのお知らせ"
-                notification.informativeText = "2019年10月11日 12:00 ～ 2019年10月11日 15:00にてメンテナンスを実施いたします。メンテナンス中は「アイドルマスター シャイニーカラーズ」をご利用いただけません。"
-                //notification.contentImage =  NSImage(named: "blue")
-                notification.userInfo = ["title" : "タイトル"]
-                notification.deliveryDate = NSDate().addingTimeInterval(1.0) as Date
-                NSUserNotificationCenter.default.scheduleNotification(notification)
-                NSUserNotificationCenter.default.deliver(notification)
-            }
+//        func applicationDidFinishLaunching(aNotification: NSNotification) {
+//                // Insert code here to initialize your application
+//
+//            NSUserNotificationCenter.default.delegate = self as? NSUserNotificationCenterDelegate
+//                let notification = NSUserNotification()
+//                notification.title = "アイドルマスター シャイニーカラーズ"
+//                notification.subtitle = "メンテナンスのお知らせ"
+//                notification.informativeText = "2019年10月11日 12:00 ～ 2019年10月11日 15:00にてメンテナンスを実施いたします。メンテナンス中は「アイドルマスター シャイニーカラーズ」をご利用いただけません。"
+//                //notification.contentImage =  NSImage(named: "blue")
+//                notification.userInfo = ["title" : "タイトル"]
+//                notification.deliveryDate = NSDate().addingTimeInterval(1.0) as Date
+//                NSUserNotificationCenter.default.scheduleNotification(notification)
+//                NSUserNotificationCenter.default.deliver(notification)
+//            }
 
             func applicationWillTerminate(aNotification: NSNotification) {
                 // Insert code here to tear down your application
             }
     
-                //    Update:アプリキルしてもアプリが残り続ける不具合を修正した
+               
     
             func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+                 //    Update:アプリキルしてもアプリが残り続ける不具合を修正した
                 return true
             }
 
